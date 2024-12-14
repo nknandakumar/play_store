@@ -1,0 +1,584 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+    background: linear-gradient(to bottom, #1a1a40, #000);
+    color: #333; /* Neon green */
+    background: url('https://www.transparenttextures.com/patterns/black-mamba.png');
+    cursor: url('assets/cursor.png') ;
+}
+
+li {
+    list-style-type: none;
+}
+
+marquee{
+    padding: 5px;
+font-size: 24px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, nav, .card h2, .account ul li {
+    font-size: 14px; /* Use smaller pixelated fonts for retro feel */
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+}
+
+nav ul li {
+    background-color: #00bcd4;
+    color:  #000;
+    border: 3px solid #000;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    text-decoration: underline blue ; 
+}
+
+nav ul li:hover {
+    color: white;
+    background-color: #ff5722;
+    
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #ff0066;
+    text-shadow: 2px 2px #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    img{
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+.nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.account ul {
+    display: flex;
+    gap: 30px;
+    li{
+        cursor: pointer;
+    }
+}
+
+nav ul {
+    display: flex;
+    font-size: larger;
+    justify-content: space-around;
+    max-width: 700px;
+   
+}
+
+.card-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 80%;
+}
+
+.card {
+    
+    color: black; /* Yellow */
+    border: 4px solid #ff5722;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 0px;
+    width: 250px;
+    
+    img{
+        width: 250px;
+    }
+    
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h2{
+        text-align: center;
+        animation: blink 1s infinite;
+        font-size: 28px;
+    }
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+button.install-btn {
+    background-color: #00ff00;
+    border: none;
+    padding: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.install-btn:hover {
+    background-color: #555;
+    color: #00ff00;
+}
+
+
+
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+ .price{
+    padding: 10px 20px ;
+    border: orangered solid 1px;
+    font-size: 24px;
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    animation: blinking 1s infinite;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-sec {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+
+    .card {
+        width: 90%;
+        padding: 10px;
+    }
+
+    button.install-btn {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-sec {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    .card {
+        width: 90%;
+        padding: 8px;
+    }
+
+    button.install-btn {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px) {
+    .card h2 {
+        font-size: 14px;
+    }
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px 0;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.footer-section {
+    margin: 20px 10px;
+    min-width: 200px;
+    max-width: 300px; /* Restrict max-width for better readability */
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    color: #fbc531; /* Neon yellow */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+  
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    text-decoration: underline whitesmoke 2px;
+    color: #7bed9f; /* Soft green */
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.footer-section ul li a:hover {
+    color: #fbc531; /* Neon yellow on hover */
+    text-decoration: underline orangered 2px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #7bed9f; /* Soft green */
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #fbc531; /* Neon yellow on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+
+}
+
+.footer-bottom p {
+    color: #7bed9f;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    img{
+        margin: 0 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+
+#profile{
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+#profile:hover{
+    color: #ff5722;
+
+    }
+
+.footer-bottom p{
+    text-decoration: none;
+}
+
+#profile .smash {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 5px;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on smash icon */
+#profile:hover .smash {
+    transform: scale(1.8) rotate(-80deg);
+}
+
+.email{
+ display: flex ;
+ a{
+    text-decoration: underline red;
+    color: whitesmoke;
+    &:hover{
+        color:#fbc531;
+    }
+ }
+}
+
+
+@media (max-width: 768px) {
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        min-width: 100%;
+    }
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 12px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    /* Footer bottom adjustments */
+    .footer-bottom p {
+        font-size: 12px;
+        flex-direction: column;
+    }
+
+    #profile {
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    #profile .smash {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Global font size reduction */
+    body {
+        font-size: 14px;
+    }
+
+    /* Navigation bar adjustments */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* Logo adjustments */
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Card section adjustments */
+    .card-sec {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .card img {
+        max-width: 150px;
+    }
+
+    .card h2 {
+        font-size: 12px;
+    }
+
+    /* Button responsiveness */
+    button.install-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 10px;
+    }
+
+    .footer-section {
+        text-align: center;
+        padding: 0 5px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        flex-direction: column;
+    }
+
+    /* Email link adjustments */
+    .email a {
+        font-size: 12px;
+    }
+
+    /* Profile hover effects */
+    #profile .smash {
+        font-size: 0.9rem;
+        margin-left: 3px;
+    }
+
+    #profile:hover .smash {
+        transform: scale(1.5) rotate(-60deg);
+    }
+}
+
+@media (max-width: 320px) {
+    /* Tiny devices */
+    body {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    nav ul li {
+        font-size: 10px;
+    }
+
+    .card h2 {
+        font-size: 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 12px;
+    }
+
+    .footer-section p, .footer-section ul {
+        font-size: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}
